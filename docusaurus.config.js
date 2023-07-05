@@ -11,15 +11,15 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://www.rustycab.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'RustyCab', // Usually your GitHub org/user name.
+  projectName: 'RustyCab Website', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -76,6 +76,12 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
+          {
+            type: 'docSidebar',
+            sidebarId: 'coummunityArticlesSidebar',
+            position: 'left',
+            label: 'Community Articles',
+          },
           { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/RustyCab',
@@ -93,6 +99,10 @@ const config = {
               {
                 label: 'Tutorial',
                 to: '/docs/intro',
+              },
+              {
+                label: 'coummunityArticles',
+                to: '/docs/community_articles/summary',
               },
             ],
           },
@@ -130,10 +140,13 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} RustyCab, Inc.`,
       },
       prism: {
-        theme: lightCodeTheme,
+        theme: require('prism-react-renderer/themes/dracula'),
         darkTheme: darkCodeTheme,
+        // Additional languages can be added here.
+        additionalLanguages: ['powershell', 'rust', 'toml', 'yaml', 'c', 'cpp'],
       },
     }),
+  themes: ['@docusaurus/theme-live-codeblock'],
 };
 
 module.exports = config;

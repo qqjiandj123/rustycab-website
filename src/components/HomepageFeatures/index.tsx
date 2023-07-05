@@ -10,7 +10,7 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'East Learn Rust',
+    title: 'Easy Learn Rust',
     Svg: require('@site/static/img/folder-svgrepo-com.svg').default,
     description: (
       <>
